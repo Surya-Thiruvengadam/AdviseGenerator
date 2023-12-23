@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+  font-size: 62.5%;
+  --LightCyan: hsl(193, 38%, 86%);
+--NeonGreen: hsl(150, 100%, 66%);
+--GrayishBlue: hsl(217, 19%, 38%);
+--DarkGrayishBlue: hsl(217, 19%, 24%);
+--DarkBlue: hsl(218, 23%, 16%);
+}
+body{
+font-family: 'Manrope', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--DarkBlue);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-container{
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+main{
+  background-color: var(--DarkGrayishBlue);
+  text-align: center;
+  border-radius: 20px;
+  padding: 4rem;
+  padding-bottom: 0;
+  position: relative;
+  transition: all 1s;
+  max-width: 45rem;
+  margin: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.advise-id{
+  color: var(--NeonGreen);
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.advise-content{
+  font-size: 2.8rem;
+  color: var(--LightCyan);
+  margin-bottom: 3rem;
+}
+
+img.seperator-img{
+  width: 100%;
+}
+
+button{
+  padding: 1.8rem;
+  background-color: var(--NeonGreen);
+  border:unset;
+  border-radius: 100%;
+  position: relative;
+  bottom: -3rem;
+}
+
+button:hover{
+  cursor: pointer;
+  filter: brightness(120%);
+  box-shadow: 0 0 2rem 0.4rem #53ffa84d, 0 0 4rem 0.6rem #53ffa840, 0 0 5rem 0.8rem #53ffa826;
+}
+
+
+@media screen and (max-width:600px) {
+ :root{
+  font-size: 50%;
+ }
+ main{
+  margin-top: -10rem;
+ }
 }
